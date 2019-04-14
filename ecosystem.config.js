@@ -5,7 +5,7 @@ module.exports = {
    */
   apps: [
     {
-      name: 'app',
+      name: 'potato-testnet-wall',
       script: 'npm',
       args: 'run start',
       env: {

@@ -3,7 +3,7 @@ var router = express.Router();
 // var async = require('async');
 // const asyncHandler = require('express-async-handler');
 
-const { Api, JsonRpc, RpcError } = require('pcjs');
+const { Api, JsonRpc, RpcError, JsSignatureProvider } = require('pcjs');
 const fetch = require('node-fetch');
 const { TextEncoder, TextDecoder } = require('util');
 
@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
   res.render('index', {});
 });
 
-app.post('/', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
     const account = req.body.name;
     if (account == undefined || account == '' || account == null) {
