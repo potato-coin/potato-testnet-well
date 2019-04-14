@@ -23,8 +23,6 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.locals.moment = require('moment');
-app.locals.numeral = require('numeral');
 app.locals.config = config;
 
 app.use('/', indexRouter);
@@ -45,14 +43,5 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-var PCJS = require("pcjs");
-var pcjs = PCJS(config.provider);
-pcjs.getInfo({}).then(result => {
-    config.provider.chainId = result.chain_id;
-  })
-  .catch(error => {
-    console.log(error);
-    throw new Error(error);
-  });
 
 module.exports = app;
