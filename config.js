@@ -1,5 +1,3 @@
-var Binaryen = require("binaryen");
-
 var config = function() {
   this.logFormat = "combined";
   this.bootstrapUrl =
