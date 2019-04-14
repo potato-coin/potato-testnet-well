@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 transfer test
+        form(method='POST')
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text', placeholder='account name' name='name')
+          div.form-group
+            label(for='amount') Amount:
+            input#amount.form-control(type='text', placeholder='100.0000 PC' name='amount')
+          button.btn.btn-primary(type='submit') Send
+        if error
+          div #{error}
+        else if msg
+          div #{msg}
