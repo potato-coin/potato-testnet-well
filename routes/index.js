@@ -37,11 +37,11 @@ router.post('/', async (req, res, next) => {
         account: 'pc.token',
         name: 'transfer',
         authorization: [{
-          actor: 'potaot',
+          actor: 'potato',
           permission: 'active',
         }],
         data: {
-          from: 'potaot',
+          from: 'potato',
           to: account,
           quantity: amount,
           memo: '',
