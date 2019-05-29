@@ -10,15 +10,15 @@ module.exports = {
       args: 'run start',
       env: {
         NODE_ENV: 'development',
-        PORT: 3000,
+        PORT: 4000,
       },
       env_sandbox: {
         NODE_ENV: 'sandbox',
-        PORT: 3000,
+        PORT: 4000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000,
+        PORT: 4000,
       },
     },
   ],
